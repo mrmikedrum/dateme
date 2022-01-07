@@ -13,3 +13,9 @@ I'm thinking here:
 <p><a href="sms:1-520-982-1608">Yes</a></p>
 
 <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">No</a></p>
+
+<style>
+    iframe {
+        max-width: 100% !important;
+    }
+</style>
