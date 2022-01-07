@@ -18,4 +18,13 @@ I'm thinking here:
     iframe {
         max-width: 100% !important;
     }
+    body {
+        background-color: #C8A2C8 !important;
+    }
+    body section p, body h1, body h2 {
+        color: #153266;
+    }
+    p a {
+        color: #204A99 !important
+    }
 </style>
