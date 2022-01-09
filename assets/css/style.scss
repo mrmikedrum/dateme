@@ -1,0 +1,61 @@
+---
+---
+
+@import "{{ site.theme }}"
+
+$button-color: $button-color;
+
+iframe {
+    max-width: 100% !important;
+}
+
+{% if page.background %}
+body {
+    background-color: #{{page.background}} !important;
+}
+{% endif %}
+
+{% if page.textColor %}
+body section p, body h1, body h2 {
+    color: #{{page.textColor}};
+}
+{% endif %}
+
+{% if page.buttonColor %}
+$button-color: {{page.buttonColor}};
+{% endif %}
+
+li a {
+
+    list-style-type: none;
+    width:132px;
+    height:15px;
+    margin-bottom: 12px;
+    line-height: 1em;
+    padding: 6px 6px 6px 7px;
+
+    background: $button-color;
+    background: -moz-linear-gradient(top, $button-color 0%, darken($button-color, 20%) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
+    background: -webkit-linear-gradient(top, $button-color 0%,darken($button-color, 20%) 100%);
+    background: -o-linear-gradient(top, $button-color 0%,darken($button-color, 20%) 100%);
+    background: -ms-linear-gradient(top, $button-color 0%,darken($button-color, 20%) 100%);
+    background: linear-gradient(to top, $button-color 0%,darken($button-color, 20%) 100%);
+
+    border-radius:4px;
+    border:1px solid #0D0D0D;
+
+    -webkit-box-shadow: inset 0px 1px 1px 0 rgba(233,2,38, 1);
+    box-shadow: inset 0px 1px 1px 0 rgba(233,2,38, 1);
+    
+}
+    
+li ali:hover {
+    background: lighten($button-color, 10%);
+    background: -moz-linear-gradient(top, lighten($button-color, 10%) 0%, darken($button-color, 10%) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
+    background: -webkit-linear-gradient(top, lighten($button-color, 10%) 0%,darken($button-color, 10%) 100%);
+    background: -o-linear-gradient(top, lighten($button-color, 10%) 0%,darken($button-color, 10%) 100%);
+    background: -ms-linear-gradient(top, lighten($button-color, 10%) 0%,darken($button-color, 10%) 100%);
+    background: linear-gradient(to top, lighten($button-color, 10%) 0%,darken($button-color, 10%) 100%);
+}
