@@ -1,61 +1,46 @@
----
----
-
-@import "{{ site.theme }}"
-
-$button-color: #AF0011;
+--- 
+--- 
+@import "{{ site.theme }}";
 
 iframe {
     max-width: 100% !important;
 }
 
-{% if page.background %}
-body {
-    background-color: #{{page.background}} !important;
-}
-{% endif %}
-
-{% if page.textColor %}
-body section p, body h1, body h2 {
-    color: #{{page.textColor}};
-}
-{% endif %}
-
-{% if page.buttonColor %}
-$button-color: {{page.buttonColor}};
-{% endif %}
-
-li a {
-
+ul.date-choices {
     list-style-type: none;
-    width:132px;
-    height:15px;
-    margin-bottom: 12px;
-    line-height: 1em;
-    padding: 6px 6px 6px 7px;
-
-    background: $button-color;
-    background: -moz-linear-gradient(top, $button-color 0%, darken($button-color, 20%) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-    background: -webkit-linear-gradient(top, $button-color 0%,darken($button-color, 20%) 100%);
-    background: -o-linear-gradient(top, $button-color 0%,darken($button-color, 20%) 100%);
-    background: -ms-linear-gradient(top, $button-color 0%,darken($button-color, 20%) 100%);
-    background: linear-gradient(to top, $button-color 0%,darken($button-color, 20%) 100%);
-
-    border-radius:4px;
-    border:1px solid #0D0D0D;
-
-    -webkit-box-shadow: inset 0px 1px 1px 0 rgba(233,2,38, 1);
-    box-shadow: inset 0px 1px 1px 0 rgba(233,2,38, 1);
-    
+    display: flex;
+    flex-flow: row nowrap;
 }
-    
-li ali:hover {
-    background: lighten($button-color, 10%);
-    background: -moz-linear-gradient(top, lighten($button-color, 10%) 0%, darken($button-color, 10%) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-    background: -webkit-linear-gradient(top, lighten($button-color, 10%) 0%,darken($button-color, 10%) 100%);
-    background: -o-linear-gradient(top, lighten($button-color, 10%) 0%,darken($button-color, 10%) 100%);
-    background: -ms-linear-gradient(top, lighten($button-color, 10%) 0%,darken($button-color, 10%) 100%);
-    background: linear-gradient(to top, lighten($button-color, 10%) 0%,darken($button-color, 10%) 100%);
+
+ul.date-choices li {
+    margin-right: 20px;
+}
+
+h1, h2, h3 {
+    border-bottom: none !important;
+}
+
+a.button {
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+@media all and (max-width:30em) {
+    a.button1 {
+        display: block;
+        margin: 0.4em auto;
+    }
 }

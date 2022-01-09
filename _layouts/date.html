@@ -31,6 +31,30 @@
 
       <footer>
       </footer>
+
+      <style>
+
+
+{% if page.background %}
+body {
+    background-color: #{{page.background}} !important;
+}
+{% endif %}
+
+{% if page.textColor %}
+body section p, body h1, body h2 {
+    color: #{{page.textColor}};
+}
+{% endif %}
+
+{% if page.buttonColor %}
+.button {
+  background-color: #{{page.buttonColor}};
+  color: #{{page.buttonTextColor}};
+}
+{% endif %}
+
+      </style>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
   </body>

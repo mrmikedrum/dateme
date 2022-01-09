@@ -1,3 +1,8 @@
+---
+layout: date
+title: Sara
+---
+
 # Hey Sara,
 
 Something is happening on January 15th at 2pm
