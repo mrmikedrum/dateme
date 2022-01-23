@@ -17,7 +17,7 @@ I would sure like to date you. So let's do that on Sunday. We can get all fancie
 
 So here's the gimmick: I've got a countdown. What's at the end? Dunno. I mean, don't get your hopes up too high. I did this in a day okay.
 
-**Visit this page from your phone at 7pm \~~Arabian Time~~ on Sunday, 1/23**
+**Visit this page from your phone at** ~~7pm~~ **8pm \~~Arabian Time~~ on Sunday, 1/23**
 
 <div id="container">
 <h2 id="title">Hot cyber date begins in...</h2>
@@ -36,7 +36,7 @@ So here's the gimmick: I've got a countdown. What's at the end? Dunno. I mean, d
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("2022-01-23T19:00:00+03:00").getTime();
+var countDownDate = new Date("2022-01-23T20:00:00+03:00").getTime();
 // var countDownDate = new Date("2022-01-22T08:07:00+03:00").getTime();
 
 // Update the count down every 1 second
