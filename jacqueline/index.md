@@ -1,6 +1,6 @@
 ---
 layout: date
-title: "Jacqueline, try 2"
+title: "Jacqueline, try 3"
 background: "C8A2C8"
 textColor: "153266"
 buttonColor: "E6E6FA"
@@ -30,13 +30,13 @@ So here's the gimmick: I've got a countdown. What's at the end? Dunno. I mean, d
     </ul>
 </div>
 
-<button class="confetti-button animate" id="link" style="display:none;" href="https://facetime.apple.com/join#v=1&p=zKw/JXs7Eey0Mpqq9oWKQA&k=jIRj_XUR3aAK0a1wfEGfGF3hkz2s2luvS_h9Mnqva_Y&l=Hot%20date">JOIN MIKE</button>
+<a class="confetti-button animate" id="link" style="display:none;" href="https://facetime.apple.com/join#v=1&p=zKw/JXs7Eey0Mpqq9oWKQA&k=jIRj_XUR3aAK0a1wfEGfGF3hkz2s2luvS_h9Mnqva_Y&l=Hot%20date">JOIN MIKE</a>
 </div>
 
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("2022-01-23T20:00:00+03:00").getTime();
+var countDownDate = new Date("2022-01-30T19:00:00+03:00").getTime();
 // var countDownDate = new Date("2022-01-22T08:07:00+03:00").getTime();
 
 // Update the count down every 1 second
