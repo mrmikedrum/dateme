@@ -1,23 +1,25 @@
 ---
 layout: date
-title: "Jacqueline, try 3"
+title: "Jacqueline and our new normal"
 background: "C8A2C8"
 textColor: "153266"
 buttonColor: "E6E6FA"
 buttonTextColor: "153266"
 ---
 
-# Hi again Jacqueline,
+# The text changed, Jacqueline
 
-We return to the scene of the crime. 
+Yeah there's more to read now. And it's gonna get sappy for a sec.
 
-You flew to another country. I didn't. So now here we are, on the internet.
+I'm really enjoying talking to you even though we don't get to overlap much. Life's kinda fucked for you right now and it's not fair, but I'm glad to be able to share in some of it and hopefully make some moments a little better. Also you're kind of a badass sexy consultant Saudi princess and like you will absolutely persevere the shit out of this.
 
-I would sure like to date you. So let's do that on Sunday. We can get all fancied up and make it a thing. You can vicariously share in some of my wine even though it'll be like 9am. Gonna be a grand old time.
+Okay.
 
-So here's the gimmick: I've got a countdown. What's at the end? Dunno. I mean, don't get your hopes up too high. I did this in a day okay.
+Onto the good stuff.
 
-**Visit this page from your phone at** ~~7pm~~ **8pm \~~Arabian Time~~ on Sunday, 1/23**
+It's almost time for some screaming about Shaina. Some decimation of Danielle. Some slamming of Shake. 
+
+**Visit this page from your laptop at 7pm \~~Arabian Time~~ on Sunday, 2/20**
 
 <div id="container">
 <h2 id="title">Hot cyber date begins in...</h2>
@@ -30,13 +32,33 @@ So here's the gimmick: I've got a countdown. What's at the end? Dunno. I mean, d
     </ul>
 </div>
 
-<a class="confetti-button animate" id="link" style="display:none;" href="https://facetime.apple.com/join#v=1&p=zKw/JXs7Eey0Mpqq9oWKQA&k=jIRj_XUR3aAK0a1wfEGfGF3hkz2s2luvS_h9Mnqva_Y&l=Hot%20date">JOIN MIKE</a>
+<script>
+  let params = `scrollbars=no,resizable=yes,status=no,location=no,toolbar=no,menubar=no,
+width=400,height=600,left=0,top=0`;
+
+function go() {
+  window.open('https://facetime.apple.com/join#v=1&p=zKw/JXs7Eey0Mpqq9oWKQA&k=jIRj_XUR3aAK0a1wfEGfGF3hkz2s2luvS_h9Mnqva_Y&l=Hot%20date', 'Cyberdate', params);
+  setTimeout(3000, () => {
+    window.location = "";
+  })
+}
+</script>
+
+<div id="instructions" style="display:none;">
+  <h3>Okay so this one is kinda complicated</h3>
+  <ol>
+  <li> First <button onclick="go()">CLICK THIS</button> for FaceTime </li>
+  <li> Second <a target="_blank" href="https://chrome.google.com/webstore/detail/netflix-party/oocalimimngaihdkbihfgmpkcpnmlaoa?hl=en">DOWNLOAD THIS</a></li>
+  <li> Finally <a href="https://redirect.teleparty.com/join/eab78206634950fb">GO HERE</a> and then click the TP icon</li>
+  </ol>
 </div>
+</div>
+
 
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("2022-01-30T19:00:00+03:00").getTime();
+var countDownDate = new Date("2022-02-20T19:00:00+03:00").getTime();
 // var countDownDate = new Date("2022-01-22T08:07:00+03:00").getTime();
 
 // Update the count down every 1 second
@@ -64,15 +86,21 @@ var x = setInterval(function() {
     clearInterval(x);
     document.getElementById("countdown").innerHTML = "";
     document.getElementById("title").innerText = "Hot cyber date begins NOW!"
-    document.getElementById("link").style.display = "inline-block";
+    document.getElementById("instructions").style.display = "inline-block";
   }
 }, 1000);
 </script>
 
 <style>
-    #container {
+  #container {
   margin: 0 auto;
   text-align: center;
+}
+
+#instructions {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: left;
 }
 
 #container #title {
@@ -81,7 +109,7 @@ var x = setInterval(function() {
   text-transform: uppercase;
 }
 
-    li {
+#countdown li {
   display: inline-block;
   font-size: 1.5em;
   list-style-type: none;
