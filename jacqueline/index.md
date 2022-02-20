@@ -49,7 +49,7 @@ function go() {
   <ol>
   <li> First <button onclick="go()">CLICK THIS</button> for FaceTime </li>
   <li> Second <a target="_blank" href="https://chrome.google.com/webstore/detail/netflix-party/oocalimimngaihdkbihfgmpkcpnmlaoa?hl=en">DOWNLOAD THIS</a></li>
-  <li> Finally <a href="https://redirect.teleparty.com/join/eab78206634950fb">GO HERE</a> and then click the TP icon</li>
+  <li> Finally <a href="https://redirect.teleparty.com/join/cdb3fedc8d5f8e41">GO HERE</a> and then click the TP icon</li>
   </ol>
 </div>
 </div>
