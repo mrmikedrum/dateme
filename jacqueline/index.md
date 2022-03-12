@@ -85,7 +85,7 @@ We're going here. I'll pick you up.
 }
 
 const instance = axios.create({
-  timeout: 1000,
+  timeout: 10000,
   headers: {'Authorization': 'Bearer keybGPgYPaQmoLF7T'} //yeah I know I just put this in the clear it's gonna get invalidated in a day okay
 });
 
