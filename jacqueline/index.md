@@ -1,217 +1,203 @@
 ---
 layout: date
-title: "Jacqueline and our new normal"
+title: "Jacqueline, our time has come"
 background: "C8A2C8"
 textColor: "153266"
 buttonColor: "E6E6FA"
 buttonTextColor: "153266"
 ---
 
-# The text changed, Jacqueline
+# It's finally happening, Jacqueline
 
-Yeah there's more to read now. And it's gonna get sappy for a sec.
+TWO MONTHS LATER, our time has come. Covid couldn't stop this. International work trips couldn't stop this. Me saying Fuck You after asking you to tell me to go to sleep couldn't stop this. 
 
-I'm really enjoying talking to you even though we don't get to overlap much. Life's kinda fucked for you right now and it's not fair, but I'm glad to be able to share in some of it and hopefully make some moments a little better. Also you're kind of a badass sexy consultant Saudi princess and like you will absolutely persevere the shit out of this.
+The real test. Do we hate each other? Is love truly ~~blind~~ possible through long distance snapchat?
 
-Okay.
+We're gonna get some sushi in you. But I assume you're gonna be miserable with jet lag and life commitments upon coming home for the first time in two months... so rather than have some completely unromantic logistical conversations, we're gonna leave that up to the magic of your custom website to help you pick a time. The website will let me know what you picked ✨
 
-Onto the good stuff.
+<form id="date">
+<div class="middle">
+  <h1>Pick your date</h1>
+  <label>
+  <input type="radio" name="date" value="2022-03-13" checked/>
+  <div class="box">
+    <span>Sunday March 13</span>
+  </div>
+</label>
 
-It's almost time for some screaming about Shaina. Some decimation of Danielle. Some slamming of Shake. 
+  <label>
+  <input type="radio" name="date" value="2022-03-14" />
+  <div class="box">
+    <span>Monday March 14</span>
+  </div>
+</label>
 
-**Visit this page from your laptop at 7pm \~~Arabian Time~~ on Sunday, 2/20**
+  <label>
+  <input type="radio" name="date" value="2022-03-15" />
+  <div class="box">
+    <span>Tuesday March 15</span>
+  </div>
+</label>
 
-<div id="container">
-<h2 id="title">Hot cyber date begins in...</h2>
-<div id="countdown">
-    <ul>
-      <li><div id="days"></div>days</li>
-      <li><div id="hours"></div>Hours</li>
-      <li><div id="minutes"></div>Minutes</li>
-      <li><div id="seconds"></div>Seconds</li>
-    </ul>
+<h1>Pick your time</h1>
+  <label>
+  <input type="radio" name="time" value="5pm" checked/>
+  <div class="box">
+    <span>5pm</span>
+  </div>
+</label>
+
+  <label>
+  <input type="radio" name="time" value="6pm" />
+  <div class="box">
+    <span>6pm</span>
+  </div>
+</label>
+
+  <label>
+  <input type="radio" name="time" value="7pm" />
+  <div class="box">
+    <span>7pm</span>
+  </div>
+</label>
 </div>
+</form>
+
+
+---
+
+We're going here. I'll pick you up.
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26990.360550731788!2d-110.93045932686508!3d32.263595631818326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d66fb469015361%3A0xefa5ce2a74487dc6!2sTakamatsu!5e0!3m2!1sen!2sus!4v1647099688854!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <script>
-  let params = `scrollbars=no,resizable=yes,status=no,location=no,toolbar=no,menubar=no,
-width=400,height=600,left=0,top=0`;
 
-function go() {
-  window.open('https://facetime.apple.com/join#v=1&p=zKw/JXs7Eey0Mpqq9oWKQA&k=jIRj_XUR3aAK0a1wfEGfGF3hkz2s2luvS_h9Mnqva_Y&l=Hot%20date', 'Cyberdate', params);
-  setTimeout(3000, () => {
-    window.location = "";
-  })
+  function getCheckedValue( groupName ) {
+    var radios = document.getElementsByName( groupName );
+    for( i = 0; i < radios.length; i++ ) {
+        if( radios[i].checked ) {
+            return radios[i].value;
+        }
+    }
+    return null;
 }
-</script>
 
-<div id="instructions" style="display:none;">
-  <h3>Okay so this one is kinda complicated</h3>
-  <ol>
-  <li> First <button onclick="go()">CLICK THIS</button> for FaceTime </li>
-  <li> Second <a target="_blank" href="https://chrome.google.com/webstore/detail/netflix-party/oocalimimngaihdkbihfgmpkcpnmlaoa?hl=en">DOWNLOAD THIS</a></li>
-  <li> Finally <a href="https://redirect.teleparty.com/join/cdb3fedc8d5f8e41">GO HERE</a> and then click the TP icon</li>
-  </ol>
-</div>
-</div>
+const instance = axios.create({
+  timeout: 1000,
+  headers: {'Authorization': 'Bearer keybGPgYPaQmoLF7T'} //yeah I know I just put this in the clear it's gonna get invalidated in a day okay
+});
 
+const form = document.getElementById("date");
 
+// set initial state
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("2022-02-20T19:00:00+03:00").getTime();
-// var countDownDate = new Date("2022-01-22T08:07:00+03:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("days").innerText = days,
-    document.getElementById("hours").innerText = hours,
-    document.getElementById("minutes").innerText = minutes,
-    document.getElementById("seconds").innerText = seconds;
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "";
-    document.getElementById("title").innerText = "Hot cyber date begins NOW!"
-    document.getElementById("instructions").style.display = "inline-block";
+instance.get('https://api.airtable.com/v0/appP324ZYPLEeJcj4/Jacqueline%20Dates/rechzY0b5xmY9yMES').then(resp => {
+  console.log(resp.data)
+  if(!!resp.data.fields) {
+    form.elements["date"].value = resp.data.fields["Start date"];
+    form.elements["time"].value = resp.data.fields["time"];
+  } else {
+    alert('shit. something went wrong. tell mike.')
   }
-}, 1000);
+}, err => {
+  alert('shit. something went wrong. tell mike this: ' + err.message)
+})
+
+// change state with form events
+
+form.addEventListener('change', (event) => {
+  instance.patch('https://api.airtable.com/v0/appP324ZYPLEeJcj4/Jacqueline%20Dates/rechzY0b5xmY9yMES', {
+      "fields": {
+        "Name": "Takamatsu",
+        "Start date": getCheckedValue("date"),
+        "time": getCheckedValue("time")
+      }
+  })
+});
 </script>
 
 <style>
-  #container {
-  margin: 0 auto;
+
+.middle {
+  width: 100%;
   text-align: center;
 }
-
-#instructions {
+.middle h1 {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+.middle input[type=radio] {
+  display: none;
+}
+.middle input[type=radio]:checked + .box {
+  background-color: #E6E6FA;
+}
+.middle input[type=radio]:checked + .box span {
+  color: 153266;
+  transform: translateY(35px);
+}
+.middle input[type=radio]:checked + .box span:before {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.middle .box {
+  width: 200px;
+  height: 100px;
+  background-color: #fff;
+  transition: all 250ms ease;
+  will-change: transition;
   display: inline-block;
-  margin: 0 auto;
-  text-align: left;
-}
-
-#container #title {
-  font-weight: normal;
-  letter-spacing: .125rem;
-  text-transform: uppercase;
-}
-
-#countdown li {
-  display: inline-block;
-  font-size: 1.5em;
-  list-style-type: none;
-  padding: 1em;
-  text-transform: uppercase;
-}
-
-li div {
-  display: block;
-  font-size: 4.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.confetti-button {
-  display: inline-block;
-  font-size: 1em;
-  padding: 1em 2em;
-  -webkit-appearance: none;
-  appearance: none;
-  background-color: #B01C1C;
-  color: #EEE;
-  border-radius: 4px;
-  border: none;
+  text-align: center;
   cursor: pointer;
   position: relative;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px rgba(238,38,37, 0.5);
-    animation-iteration-count: infinite;
-
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
 }
-
-.confetti-button:focus { outline: 0; }
-
-.confetti-button:before, .confetti-button:after {
+.middle .box:active {
+  transform: translateY(10px);
+}
+.middle .box span {
   position: absolute;
-  content: '';
+  transform: translate(0, 40px);
+  left: 0;
+  right: 0;
+  transition: all 300ms ease;
+  font-size: 1.5em;
+  user-select: none;
+  color: #007e90;
+}
+.middle .box span:before {
+  font-size: 1.2em;
+  font-family: FontAwesome;
   display: block;
-  width: 140%;
-  height: 100%;
-  left: -20%;
-  z-index: -1000;
-  transition: all ease-in-out 0.5s;
-  background-repeat: no-repeat;
-
+  transform: translateY(-80px);
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  font-weight: normal;
+  color: white;
 }
-
-.confetti-button:before {
-  display: none;
-  top: -75%;
-  background-image: radial-gradient(circle, #EE2625 20%, transparent 20%), radial-gradient(circle, transparent 20%, #EE2625 20%, transparent 30%), radial-gradient(circle, #EE2625 20%, transparent 20%), radial-gradient(circle, #EE2625 20%, transparent 20%), radial-gradient(circle, transparent 10%, #EE2625 15%, transparent 20%), radial-gradient(circle, #EE2625 20%, transparent 20%), radial-gradient(circle, #EE2625 20%, transparent 20%), radial-gradient(circle, #EE2625 20%, transparent 20%), radial-gradient(circle, #EE2625 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+.middle .front-end span:before {
+  content: "";
 }
-
-.confetti-button:after {
-  display: none;
-  bottom: -75%;
-  background-image: radial-gradient(circle, #EE2625 20%, transparent 20%), radial-gradient(circle, #EE2625 20%, transparent 20%), radial-gradient(circle, transparent 10%, #EE2625 15%, transparent 20%), radial-gradient(circle, #EE2625 20%, transparent 20%), radial-gradient(circle, #EE2625 20%, transparent 20%), radial-gradient(circle, #EE2625 20%, transparent 20%), radial-gradient(circle, #EE2625 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+.middle .back-end span:before {
+  content: "";
 }
-
-.confetti-button:active {
-  transform: scale(0.9);
-  background-color: #e60074;
-  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+.middle p {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
-
-.confetti-button.animate:before {
-  display: block;
-  animation: topBubbles ease-in-out 0.75s forwards;
-    animation-iteration-count: infinite;
-
+.middle p a {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #fff;
 }
-
-.confetti-button.animate:after {
-  display: block;
-  animation: bottomBubbles ease-in-out 0.75s forwards;
-    animation-iteration-count: infinite;
-
-}
- @keyframes
-topBubbles {  0% {
- background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-}
- 50% {
- background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
-}
- 100% {
- background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
- background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-}
-}
-@keyframes
-bottomBubbles {  0% {
- background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
-}
- 50% {
- background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
-}
- 100% {
- background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
- background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-}
+.middle p span:after {
+  content: "";
+  font-family: FontAwesome;
+  color: yellow;
 }
 </style>
 
