@@ -52,7 +52,7 @@ Let's get some fuckin soup in you. Just let me know when and where.
 <div class="demo-wrap">
   <img
     class="demo-bg"
-    src="/assets/img/soup.jpeg"
+    src="{{ '/assets/img/soup.jpeg' | relative_url }}"
     alt=""
   >
 </div>
