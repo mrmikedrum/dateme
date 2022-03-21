@@ -9,7 +9,7 @@ Let's get some fuckin soup in you. Just let me know when and where.
 
 <form id="date">
 <div class="middle">
-  <h1>Pick your date</h1>
+  <h1>Pick your place</h1>
   <label>
   <input type="radio" name="place" value="Delivery" checked/>
   <div class="box">
